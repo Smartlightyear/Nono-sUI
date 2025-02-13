@@ -28,11 +28,8 @@ MSection:NewSlider("Speed", "Bypasses speed anti-cheat", 500, 16, function(s)
     end
 end)
 
-MSection:NewSlider("JumpPower", "Bypasses jumppower anti-cheat", 500, 16, function(s)
-    local player = game.Players.LocalPlayer
-    if player and player.Character and player.Character:FindFirstChild("Humanoid") then
-        player.Character.Humanoid.JumpPower = s
-    end
+MSection:NewSlider("JumpPower", "Bypasses jumppower anti-cheat", 1000, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
 -- Infinite Jump
@@ -91,10 +88,6 @@ end)
 
 MSection:NewButton("FLY GUI V3", "Loads fly gui", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
-end)
-
-MSection:NewButton("FE HUB loader", "Key is 1231fwfgr13gr334", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Smartlightyear/DoorsV3/refs/heads/main/FEHUB", true))()
 end)
 
 local FEScriptsSection = MainTab:NewSection("FE Scripts")
@@ -399,8 +392,8 @@ end
 local function importantNote()
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "wsg g",
-        Text = "Jesus loves you bro!!",
-        Duration = 99999999999
+        Text = "Thanks for testing our script " .. game.Players.LocalPlayer.DisplayName .. "!",
+        Duration = 5
     })
 end
 
