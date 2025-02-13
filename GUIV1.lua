@@ -11,7 +11,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("Nono's GUI V1 | Created By Moonlight, & Smartlightyear | " .. game.Players.LocalPlayer.Name, "BloodTheme")
+local Window = Library.CreateLib("Nono's GUI V1 | Created By Moonlight, & Smartlightyear | " .. game.Players.LocalPlayer.DisplayName, "BloodTheme")
 
 local MainTab = Window:NewTab("Main🏡")
 
